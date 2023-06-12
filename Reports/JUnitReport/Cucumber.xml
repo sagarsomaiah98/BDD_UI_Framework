@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="42.684" tests="9" skipped="0" failures="0" errors="0">
+<testcase classname="Home Page functionality" name="Verify home page navigation" time="7.205">
+<system-out><![CDATA[
+Given I launch browser......................................................passed
+And I Navigate to the url "https://tutorialsninja.com/demo/index.php?route=account/login".passed
+And I search the product "imac".............................................passed
+And I click on addtocart....................................................passed
+And I click on shoppingcart.................................................passed
+And I click on Continue Shopping............................................passed
+Then I am navigated to homepage.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Home Page functionality" name="Verify home page navigation" time="4.413">
+<system-out><![CDATA[
+Given I launch browser......................................................passed
+And I Navigate to the url "https://tutorialsninja.com/demo/index.php?route=account/login".passed
+And I click on PC(O) under Desktop menu.....................................passed
+And I click on Continue in PC page..........................................passed
+Then I am navigated to homepage.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate login functionality" name="Verify login functionality is successfully" time="4.307">
+<system-out><![CDATA[
+Given I launch browser......................................................passed
+And I Navigate to the url "https://tutorialsninja.com/demo/index.php?route=account/login".passed
+When Enter the username "kevin123@gmail.com"................................passed
+And Enter the password "Kevin123"...........................................passed
+And I click on login button.................................................passed
+Then I validate the login successfully......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate login functionality" name="Verify invalid credentials for login" time="4.172">
+<system-out><![CDATA[
+Given I launch browser......................................................passed
+And I Navigate to the url "https://tutorialsninja.com/demo/index.php?route=account/login".passed
+When Enter the username "user1@gmail.com"...................................passed
+And Enter the password "123456".............................................passed
+And I click on login button.................................................passed
+Then I see no match warninng message........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate login functionality" name="Verify forgot password" time="3.492">
+<system-out><![CDATA[
+Given I launch browser......................................................passed
+And I Navigate to the url "https://tutorialsninja.com/demo/index.php?route=account/login".passed
+And I click forgot password.................................................passed
+Then I validate email field to reset password...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logout functionality" name="Verify logout functionality" time="4.914">
+<system-out><![CDATA[
+Given I launch browser......................................................passed
+And I Navigate to the url "https://tutorialsninja.com/demo/index.php?route=account/login".passed
+When Enter the username "kevin123@gmail.com"................................passed
+And Enter the password "Kevin123"...........................................passed
+And I click on login button.................................................passed
+And I click on MyAccount....................................................passed
+And I click on LogOut.......................................................passed
+Then I verify user is logged out............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Register functionality" name="Register with email id - Example #1.1" time="5.506">
+<system-out><![CDATA[
+Given I launch browser......................................................passed
+And I Navigate to the url "https://tutorialsninja.com/demo/index.php?route=account/login".passed
+And I click on MyAccount....................................................passed
+And I click Register........................................................passed
+And I enter new account details for mandatory fields "Kevin" "Joy" "04123456789" "Kevin123" "Kevin123".passed
+And I click Privacy Policy..................................................passed
+And I click on Continue.....................................................passed
+Then I verify Account is created............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Register functionality" name="Verify Warning message displayed for mandatory fields - Example #1.1" time="4.553">
+<system-out><![CDATA[
+Given I launch browser......................................................passed
+And I Navigate to the url "https://tutorialsninja.com/demo/index.php?route=account/login".passed
+And I click on MyAccount....................................................passed
+And I click Register........................................................passed
+And I click on Continue.....................................................passed
+Then I verify Warning message for mandatory fields "Warning: You must agree to the Privacy Policy!" "First Name must be between 1 and 32 characters!" "Last Name must be between 1 and 32 characters!" "E-Mail Address does not appear to be valid!"  "Telephone must be between 3 and 32 characters!" "Password must be between 4 and 20 characters!".passed
+]]></system-out>
+</testcase>
+<testcase classname="Search functionality" name="Verify Search functionality" time="3.803">
+<system-out><![CDATA[
+Given I launch browser......................................................passed
+And I Navigate to the url "https://tutorialsninja.com/demo/index.php?route=account/login".passed
+And I search the product "imac".............................................passed
+Then search result should be displayed......................................passed
+]]></system-out>
+</testcase>
+</testsuite>
